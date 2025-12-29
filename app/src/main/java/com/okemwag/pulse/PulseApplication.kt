@@ -1,9 +1,10 @@
 package com.okemwag.pulse
 
 import android.app.Application
-import android.os.StrictMode
+import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
 
+@HiltAndroidApp
 class PulseApplication : Application() {
 
     override fun onCreate() {

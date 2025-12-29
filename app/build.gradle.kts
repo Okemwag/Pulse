@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.kotlin.kapt)
 }
 
 android {
@@ -44,6 +46,11 @@ dependencies {
     implementation(project(":core:design"))
     implementation(project(":core:common"))
     implementation(project(":core:blockchain"))
+    implementation(project(":core:network"))
+    implementation(project(":core:database"))
+    implementation(project(":shared:domain"))
+    implementation(project(":shared:data"))
+    
     // Core Android
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -58,6 +65,7 @@ dependencies {
     
     // Navigation
     implementation(libs.androidx.navigation.compose)
+    implementation(libs.hilt.navigation.compose)
     
     // Splash Screen
     implementation(libs.androidx.splashscreen)
@@ -75,8 +83,13 @@ dependencies {
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
     
+    // Hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
+    
     // Javax Inject
     implementation(libs.javax.inject)
+    
     // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
