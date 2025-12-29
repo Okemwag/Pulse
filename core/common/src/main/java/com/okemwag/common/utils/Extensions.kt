@@ -1,10 +1,11 @@
-package com.okemwag.pulse.core.common.utils
+package com.okemwag.common.utils
 
 import android.content.Context
 import android.widget.Toast
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.Dp
+import com.okemwag.common.result.Result
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.map

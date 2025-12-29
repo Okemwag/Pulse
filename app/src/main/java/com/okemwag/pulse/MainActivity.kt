@@ -9,31 +9,27 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import androidx.hilt.navigation.compose.hiltViewModel
-import com.okemwag.communitynews.core.design.theme.CommunityNewsTheme
-import com.okemwag.communitynews.navigation.CommunityNewsNavigation
-import dagger.hilt.android.AndroidEntryPoint
+import com.okemwag.design.theme.PulseTheme
+import com.okemwag.pulse.navigation.PulseNavigation
 
-@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        // Handle splash screen
+        // Install system splash screen (briefly shown before our custom one)
         val splashScreen = installSplashScreen()
 
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
         setContent {
-            CommunityNewsTheme {
+            PulseTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    CommunityNewsNavigation()
+                    PulseNavigation()
                 }
             }
         }
     }
 }
-

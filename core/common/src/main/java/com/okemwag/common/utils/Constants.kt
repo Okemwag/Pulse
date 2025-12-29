@@ -1,4 +1,4 @@
-package com.okemwag.pulse.core.common.utils
+package com.okemwag.common.utils
 
 object Constants {
     // Network

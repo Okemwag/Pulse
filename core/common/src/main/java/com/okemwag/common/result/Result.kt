@@ -1,7 +1,4 @@
-// ===========================================
-// core/common/src/main/java/com/okemwag/pulse/core/common/result/Result.kt
-// ===========================================
-package com.okemwag.pulse.core.common.result
+package com.okemwag.common.result
 
 /**
  * A generic wrapper for handling success/error states
