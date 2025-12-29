@@ -15,7 +15,11 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.*
+import com.okemwag.pulse.ui.alerts.AlertsScreen
 import com.okemwag.pulse.ui.home.HomeScreen
+import com.okemwag.pulse.ui.market.MarketScreen
+import com.okemwag.pulse.ui.news.NewsScreen
+import com.okemwag.pulse.ui.profile.ProfileScreen
 import com.okemwag.pulse.ui.splash.SplashScreen
 
 /**
@@ -139,27 +143,27 @@ fun PulseNavigation() {
                 )
             }
             
-            // News Screen (placeholder)
+            // News Screen
             composable(Screen.News.route) {
-                PlaceholderScreen(title = "News Feed", description = "Latest community news and updates")
+                NewsScreen()
             }
             
-            // Alerts Screen (placeholder)
+            // Alerts Screen
             composable(Screen.Alerts.route) {
-                PlaceholderScreen(title = "Alerts", description = "Emergency alerts and notifications")
+                AlertsScreen()
             }
             
-            // Classifieds Screen (placeholder)
+            // Marketplace Screen
             composable(Screen.Classifieds.route) {
-                PlaceholderScreen(title = "Marketplace", description = "Community classifieds and listings")
+                MarketScreen()
             }
             
-            // Profile Screen (placeholder)
+            // Profile Screen
             composable(Screen.Profile.route) {
-                PlaceholderScreen(title = "Profile", description = "Your profile and settings")
+                ProfileScreen()
             }
             
-            // Wallet Screen (placeholder)
+            // Wallet Screen (placeholder for now)
             composable(Screen.Wallet.route) {
                 PlaceholderScreen(title = "Wallet", description = "Your token balance and transactions")
             }
